@@ -1,0 +1,14 @@
+{
+    "id": "toolchain-build-go",
+    "toolchain": {
+        "dockerfile": "Dockerfile",
+        "files": [
+            "toolchain.sh"
+        ],
+        "steps": [
+            "build",
+            "lint",
+            "test"
+        ]
+    }
+}

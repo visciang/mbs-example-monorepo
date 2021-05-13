@@ -1,0 +1,12 @@
+{
+    "id": "toolchain-build-docker",
+    "toolchain": {
+        "dockerfile": "Dockerfile",
+        "files": [
+            "toolchain.sh"
+        ],
+        "steps": [
+            "build"
+        ]
+    }
+}

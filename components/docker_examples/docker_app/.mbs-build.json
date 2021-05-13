@@ -1,0 +1,16 @@
+
+    {
+      "id": "docker_app",
+      "component": {
+        "toolchain": "toolchain-build-docker",
+        "files": [
+            "hello.sh",
+            "Dockerfile"
+        ],
+        "targets": [
+            "docker://docker_app"
+        ],
+        "dependencies": []
+      }
+    }
+  
