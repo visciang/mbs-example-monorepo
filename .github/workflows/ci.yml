@@ -9,6 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: .mbs-local-cache
+          key: cache
+
       - name: Build
         run: |
           ./mbs.sh build run --verbose --sandbox

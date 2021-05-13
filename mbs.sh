@@ -11,8 +11,8 @@ LOG_LEVEL="info"
 LOG_COLOR="true"
 
 MBS_PROJECT_ID="mbs-example-monorepo"
-MBS_LOCAL_CACHE_VOLUME="mbs-$MBS_PROJECT_ID-local-cache"
-MBS_RELEASES_VOLUME="mbs-$MBS_PROJECT_ID-releases"
+MBS_LOCAL_CACHE_VOLUME="$ABS_BASEDIR/.mbs-local-cache"
+MBS_RELEASES_VOLUME="$ABS_BASEDIR/.mbs-releases"
 MBS_GRAPH_VOLUME="$ABS_BASEDIR/.mbs-graph"
 
 # [OPTIONAL] external cache for artifacts files and docker images
