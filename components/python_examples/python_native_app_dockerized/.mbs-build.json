@@ -7,7 +7,7 @@
             "docker-compose.yml"
         ],
         "targets": [
-            "docker://python_native_app_dockerized",
+            "docker://mbs-example-monorepo/python_native_app_dockerized",
             "docker-compose.yml"
         ],
         "dependencies": [

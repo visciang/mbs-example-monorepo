@@ -8,7 +8,7 @@
             "Dockerfile"
         ],
         "targets": [
-            "docker://docker_app"
+            "docker://mbs-example-monorepo/docker_app"
         ],
         "dependencies": []
       }
