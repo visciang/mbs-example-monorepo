@@ -40,7 +40,11 @@ args $0 "$@"
 
 case $1 in
     build)
-        eval docker image build ${EXTRA_ARGS} --rm --file ${FILE} --tag ${MBS_ID}:${MBS_CHECKSUM} .
+        eval docker image build ${EXTRA_ARGS} --rm --file ${FILE} \
+            --label MBS_PROJECT_ID=${MBS_PROJECT_ID} \
+            --label MBS_ID=${MBS_ID} \
+            --label MBS_CHECKSUM=${MBS_CHECKSUM} \
+            --tag ${MBS_ID}:${MBS_CHECKSUM} .
         ;;
     *)
         echo "bad target: $1"

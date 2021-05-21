@@ -5,6 +5,7 @@ set -e
 ./mbs.sh version
 ./mbs.sh --help
 ./mbs.sh build ls
+./mbs.sh cache size
 ./mbs.sh build ls --verbose
 ./mbs.sh deploy ls
 ./mbs.sh deploy ls --verbose

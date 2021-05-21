@@ -1,4 +1,4 @@
-FROM elixir:1.11.4-alpine
+FROM elixir:1.12.0-alpine
 
 RUN mix local.rebar --force && mix local.hex --force
 ADD toolchain.sh /toolchain.sh
