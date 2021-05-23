@@ -9,8 +9,7 @@
         ],
         "targets": [
             "docker://docker_app"
-        ],
-        "dependencies": []
+        ]
       }
     }
   
