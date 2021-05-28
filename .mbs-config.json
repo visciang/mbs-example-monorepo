@@ -1,4 +1,23 @@
 {
+    "project": "mbs-example-monorepo",
+    "log": {
+        "level": "info",
+        "color": true
+    },
+    "volume": {
+        "releases": "mbs-example-monorepo-releases",
+        "graph": "$BASEDIR/.mbs-graph"
+    },
+    "cache": {
+        "local": {
+            "volume": "mbs-example-monorepo-local-cache"
+        },
+        "remote": {
+            "push": false,
+            "volume": "",
+            "docker_registry": ""
+        }
+    },
     "timeout": 600,
     "files_profile": {
         "elixir": [
