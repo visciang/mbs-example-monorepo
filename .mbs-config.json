@@ -4,19 +4,10 @@
         "level": "info",
         "color": true
     },
-    "volume": {
-        "releases": "mbs-example-monorepo-releases",
-        "graph": "$BASEDIR/.mbs-graph"
-    },
-    "cache": {
-        "local": {
-            "volume": "mbs-example-monorepo-local-cache"
-        },
-        "remote": {
-            "push": false,
-            "volume": "",
-            "docker_registry": ""
-        }
+    "remote_cache": {
+        "push": false,
+        "volume": null,
+        "docker_registry": null
     },
     "timeout": 600,
     "files_profile": {
