@@ -27,5 +27,5 @@ jobs:
         run: ./mbs.sh build run --verbose --sandbox
 
       - name: Cache export
-        if: steps.cache.outputs.cache-hit == 'true'
+        if: github.ref == 'refs/heads/main'
         run: ./.github/cache_export.sh
