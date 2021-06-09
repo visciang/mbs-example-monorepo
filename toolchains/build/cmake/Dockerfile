@@ -1,11 +1,6 @@
-FROM gcc:10.2.0
+FROM alpine:3.13
 
-RUN wget https://github.com/Kitware/CMake/releases/download/v3.19.6/cmake-3.19.6-Linux-x86_64.sh \
-      -q -O /tmp/cmake-install.sh \
-      && chmod u+x /tmp/cmake-install.sh \
-      && mkdir /usr/bin/cmake \
-      && /tmp/cmake-install.sh --skip-license --prefix=/usr/bin/cmake \
-      && rm /tmp/cmake-install.sh
+RUN apk add --no-cache "cmake>3.18" make gcc g++ libc-dev
 
 ADD toolchain.sh /toolchain.sh
 

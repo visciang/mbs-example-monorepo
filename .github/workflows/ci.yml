@@ -10,6 +10,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Retrieve cache
+        # just cache on the main branch
+        if: github.ref == 'refs/heads/main'
+        uses: actions/cache@v2
+        with:
+          path: |
+            .cache
+          key: cache
+
+      - name: Cache import
+        if: steps.cache.outputs.cache-hit == 'true'
+        run: ./.github/cache_import.sh
+
       - name: Build
-        run: |
-          ./mbs.sh build run --verbose --sandbox
+        run: ./mbs.sh build run --verbose --sandbox
+
+      - name: Cache export
+        if: steps.cache.outputs.cache-hit == 'true'
+        run: ./.github/cache_export.sh
