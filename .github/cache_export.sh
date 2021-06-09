@@ -13,8 +13,9 @@ for VOLUME in $MBS_VOLUMES; do
     docker run --rm -v $PWD/.cache/$VOLUME:/dest -v $VOLUME:/source alpine cp -rT /source /dest
 done
 
-USER_=$(id -u) GROUP_=$(id -g) sudo chown -R $USER_:$GROUP_ .cache
-chmod -R +w .cache
+sudo chmod -R +w .cache
+USER_=$(id -u) GROUP_=$(id -g)
+sudo chown -R $USER_:$GROUP_ .cache
 
 # if cache size too big just wipe all for simplicity (no complex eviction policy).
 # The next it will run clean (no cache) and then cache the latest packages.
