@@ -2,6 +2,8 @@
 
 set -e
 
+sudo chown -R root:root .cache
+
 for CACHE_DIR in .cache/*; do
     VOLUME=$(basename $CACHE_DIR)
     
