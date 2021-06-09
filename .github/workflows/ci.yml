@@ -17,7 +17,9 @@ jobs:
         with:
           path: |
             .cache
-          key: cache
+          key: ${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-
 
       - name: Cache import
         if: steps.cache.outputs.cache-hit == 'true'
