@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -ex
 
 MBS_VOLUMES=$(docker volume ls --format "{{ .Name}}" | grep -P "^mbs-")
 
@@ -13,6 +13,7 @@ for VOLUME in $MBS_VOLUMES; do
     docker run --rm -v $PWD/.cache/$VOLUME:/dest -v $VOLUME:/source alpine cp -rT /source /dest
 done
 
+echo $USER
 sudo chmod -R +w .cache
 USER_=$(id -u) GROUP_=$(id -g)
 sudo chown -R $USER_:$GROUP_ .cache
