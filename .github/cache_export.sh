@@ -13,11 +13,13 @@ for VOLUME in $MBS_VOLUMES; do
     docker run --rm -v $PWD/.cache/$VOLUME:/dest -v $VOLUME:/source alpine cp -rT /source /dest
 done
 
+sudo chown -R $(id -u):$(id -g) .cache
+
 # if cache size too big just wipe all for simplicity (no complex eviction policy).
 # The next it will run clean (no cache) and then cache the latest packages.
 
 CACHE_LIMIT="8000000000"
-CACHE_UNCOMPRESSED_SIZE=$(sudo du -bs .cache | cut -f 1)
+CACHE_UNCOMPRESSED_SIZE=$(du -bs .cache | cut -f 1)
 
 echo "Uncompressed cache size $CACHE_UNCOMPRESSED_SIZE"
 
