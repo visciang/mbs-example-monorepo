@@ -1,20 +1,18 @@
 #!/bin/sh
 
-set -ex
+set -e
 
 MBS_VOLUMES=$(docker volume ls --format "{{ .Name}}" | grep -P "^mbs-")
 
 for VOLUME in $MBS_VOLUMES; do
     echo "Exporting docker volume $VOLUME"
 
-    CACHE_DIR=$PWD/.cache/$VOLUME
-    mkdir -p $CACHE_DIR
+    mkdir -p $PWD/.cache
 
-    docker run --rm -v $PWD/.cache/$VOLUME:/dest -v $VOLUME:/source alpine cp -rT /source /dest
+    docker run --rm -v $PWD/.cache:/dest -v $VOLUME:/volume alpine tar -cpf /dest/$VOLUME.tar volume
 done
 
-echo $USER
-sudo chmod -R +w .cache
+# sudo chmod -R +w .cache
 USER_=$(id -u) GROUP_=$(id -g)
 sudo chown -R $USER_:$GROUP_ .cache
 
@@ -24,9 +22,9 @@ sudo chown -R $USER_:$GROUP_ .cache
 CACHE_LIMIT="8000000000"
 CACHE_UNCOMPRESSED_SIZE=$(du -bs .cache | cut -f 1)
 
-echo "Uncompressed cache size $CACHE_UNCOMPRESSED_SIZE"
+ls -lh $PWD/.cache
 
 if [ "$CACHE_UNCOMPRESSED_SIZE" -gt "$CACHE_LIMIT" ]; then
-    echo "Over limit, wiping cache! (limit=$CACHE_LIMIT)"
-    sudo rm -rf .cache
+    echo "Over limit ($CACHE_UNCOMPRESSED_SIZE > $CACHE_LIMIT), wiping cache!"
+    rm -rf .cache
 fi
