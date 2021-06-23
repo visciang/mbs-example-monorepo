@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Retrieve cache
+      - name: cache
         # just cache on the main branch
         if: github.ref == 'refs/heads/main'
         uses: actions/cache@v2
