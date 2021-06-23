@@ -12,7 +12,7 @@ jobs:
 
       - name: cache
         # just cache on the main branch
-        if: github.ref == 'refs/heads/main'
+        if: ${{ github.ref == 'refs/heads/main' }}
         uses: actions/cache@v2
         with:
           path: |
@@ -22,12 +22,16 @@ jobs:
             ${{ runner.os }}-
 
       - name: Cache import
-        if: steps.cache.outputs.cache-hit == 'true'
+        if: ${{ steps.cache.outputs.cache-hit == 'true' }}
+        run: ./.github/cache_import.sh
+
+      - name: Cache import test
+        if: ${{ steps.cache.outputs.cache-hit != 'true' }}
         run: ./.github/cache_import.sh
 
       - name: Build
         run: ./mbs.sh build run --verbose --sandbox
 
       - name: Cache export
-        if: github.ref == 'refs/heads/main'
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: ./.github/cache_export.sh
