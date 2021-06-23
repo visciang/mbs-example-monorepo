@@ -22,12 +22,14 @@ jobs:
             ${{ runner.os }}-
 
       - name: Cache import
-        if: ${{ steps.cache.outputs.cache-hit == 'true' }}
+        if: ${{ steps.cache.outputs.cache-hit == true }}
         run: ./.github/cache_import.sh
 
       - name: Cache import test
         if: ${{ steps.cache.outputs.cache-hit != 'true' }}
-        run: ./.github/cache_import.sh
+        run: |
+          ./.github/cache_import.sh
+          echo ${{ steps.cache.outputs.cache-hit }}
 
       - name: Build
         run: ./mbs.sh build run --verbose --sandbox
