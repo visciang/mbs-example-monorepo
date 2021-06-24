@@ -23,7 +23,6 @@ jobs:
             ${{ runner.os }}-
 
       - name: Cache import
-        if: steps.cache.outputs.cache-hit == 'true'
         run: ./.github/cache_import.sh
 
       - name: Build
