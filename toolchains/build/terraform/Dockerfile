@@ -1,3 +1,3 @@
-FROM hashicorp/terraform:1.0.1
+FROM hashicorp/terraform:0.14.9
 ADD toolchain.sh /toolchain.sh
 ENTRYPOINT [ "/toolchain.sh" ]
