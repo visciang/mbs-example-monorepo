@@ -2,8 +2,8 @@
 
 set -e
 
-MBS_VERSION=0.2.2
+MBS_VERSION=0.3.0
 BASEDIR=$(dirname "$0")
 BASEDIR=$(readlink -f -- "$BASEDIR")
 
-eval "$(docker run --init --rm --net host -v $BASEDIR:$BASEDIR -w $BASEDIR visciang/mbs:$MBS_VERSION bootstrap)"
+eval "$(docker run --init --rm --net=host --volume="$BASEDIR":"/mbs/run" --workdir="/mbs/run" visciang/mbs:$MBS_VERSION bootstrap)"
