@@ -6,7 +6,7 @@ case $1 in
     build)
         rm -rf .build
         mkdir .build
-        docker-compose config > .build/docker-compose.yml
+        docker compose config > .build/docker-compose.yml
         ;;
     *)
         echo "bad target: $1"

@@ -35,7 +35,7 @@ args $0 "$@"
 case $1 in
     deploy)
         if [ $LOAD_ONLY == 0 ]; then
-            docker-compose up -d
+            docker compose up -d
         else
             # nothing to do
             echo "PASS"
@@ -43,7 +43,7 @@ case $1 in
         ;;
     destroy)
         if [ $LOAD_ONLY == 0 ]; then
-            docker-compose down --volumes --remove-orphans
+            docker compose down --volumes --remove-orphans
         else
             # nothing to do
             echo "PASS"
