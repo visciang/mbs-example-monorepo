@@ -17,7 +17,7 @@ USER_=$(id -u) GROUP_=$(id -g)
 sudo chown -R $USER_:$GROUP_ .cache
 
 # if cache size too big just wipe all for simplicity (no complex eviction policy).
-# The next it will run clean (no cache) and then cache the latest packages.
+# The next time it will run clean (no cache) and then cache the latest packages.
 
 CACHE_LIMIT="8000000000"
 CACHE_UNCOMPRESSED_SIZE=$(du -bs .cache | cut -f 1)
