@@ -11,7 +11,8 @@ case $1 in
         ;;
     destroy)
         echo "Running sh DESTROY command: $COMMAND"
-        __DESTORY__=1 eval "$COMMAND"
+        export __DESTROY__=1
+        eval "$COMMAND"
         ;;
     *)
         echo "bad target: $1"

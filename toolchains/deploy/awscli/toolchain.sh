@@ -13,7 +13,8 @@ case $1 in
         $SCRIPT
         ;;
     destroy)
-        __DESTROY__=1 $SCRIPT
+        export __DESTROY__=1
+        $SCRIPT
         ;;
     *)
         echo "bad target: $1"
