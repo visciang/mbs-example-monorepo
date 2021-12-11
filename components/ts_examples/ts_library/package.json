@@ -1,0 +1,10 @@
+{
+  "name": "ts_library",
+  "version": "0.0.0",
+  "dependencies": {
+    "typescript": "^4.5.3"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}

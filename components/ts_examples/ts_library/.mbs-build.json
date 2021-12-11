@@ -1,0 +1,10 @@
+{
+    "id": "ts_library",
+    "component": {
+        "toolchain": "toolchain-build-js",
+        "files_profile": "ts",
+        "targets": [
+            ".build/ts_library-0.0.0.tgz"
+        ]
+    }
+}

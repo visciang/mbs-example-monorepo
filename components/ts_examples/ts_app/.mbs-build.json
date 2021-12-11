@@ -1,0 +1,13 @@
+{
+    "id": "ts_app",
+    "component": {
+        "toolchain": "toolchain-build-js",
+        "files_profile": "ts",
+        "targets": [
+            ".build/ts_app-0.0.0.tgz"
+        ],
+        "dependencies": [
+            "ts_library"
+        ]
+    }
+}

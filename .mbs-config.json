@@ -16,6 +16,14 @@
             "mix.{exs,lock}",
             "config/*.exs",
             "{apps,lib,test}/**/*.{ex,exs}"
+        ],
+        "ts": [
+            "!node_modules/**/*",
+            "**/*.ts",
+            "package-lock.json",
+            "package.json",
+            "tsconfig.json",
+            ".npmignore"
         ]
     }
 }

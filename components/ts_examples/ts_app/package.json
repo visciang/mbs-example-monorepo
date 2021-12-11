@@ -1,0 +1,14 @@
+{
+  "name": "ts_app",
+  "version": "0.0.0",
+  "dependencies": {
+    "typescript": "^4.5.3",
+    "ts_library": "file:../ts_library"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "bundledDependencies": [
+    "ts_library"
+  ]
+}

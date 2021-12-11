@@ -16,6 +16,8 @@
         "components/go_examples/src/monorepo.com/golib",
         "components/js_examples/js_app",
         "components/js_examples/js_library",
+        "components/ts_examples/ts_app",
+        "components/ts_examples/ts_library",
         "components/python_examples/python_library",
         "components/python_examples/python_native_app",
         "components/python_examples/python_native_app_dockerized",
