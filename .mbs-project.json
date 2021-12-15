@@ -28,6 +28,7 @@
         "toolchains/build/elixir",
         "toolchains/build/go",
         "toolchains/build/js",
+        "toolchains/build/multiversion_example",
         "toolchains/build/python",
         "toolchains/build/terraform",
         "toolchains/deploy/awscli",

@@ -1,27 +1,28 @@
 [
     {
-        "id": "toolchain-build-js",
+        "id": "toolchain-multiversion-example-v1",
         "toolchain": {
             "dockerfile": "Dockerfile",
             "files": [
                 "toolchain.sh"
             ],
             "steps": [
-                "lint",
                 "build"
             ]
-        }
+        },
+        "docker_opts": ["--build-arg", "ALPINE_VERSION=3.14.0"]
     },
     {
-        "id": "toolchain-build-js-cache",
+        "id": "toolchain-multiversion-example-v2",
         "toolchain": {
             "dockerfile": "Dockerfile",
             "files": [
                 "toolchain.sh"
             ],
             "steps": [
-                "cache"
+                "build"
             ]
-        }
+        },
+        "docker_opts": ["--build-arg", "ALPINE_VERSION=3.15.0"]
     }
 ]

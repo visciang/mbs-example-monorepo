@@ -1,9 +1,10 @@
-
-    {
-      "id": "services_app",
-      "component": {
+{
+    "id": "services_app",
+    "component": {
         "toolchain": "toolchain-meta-sh",
-        "toolchain_opts": ["./ping.sh"],
+        "toolchain_opts": [
+            "./ping.sh"
+        ],
         "files": [
             "ping.sh",
             "Dockerfile"
@@ -12,6 +13,5 @@
             "ping.sh"
         ],
         "services": "docker-compose.yml"
-      }
-    }
-  
+    },
+}

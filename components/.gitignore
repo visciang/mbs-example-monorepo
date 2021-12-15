@@ -8,6 +8,7 @@ go_examples/bin
 go_examples/pkg
 
 node_modules/
+.cache
 
 python*/**/*.egg-info/
 python*/**/build/
