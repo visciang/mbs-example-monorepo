@@ -4,6 +4,7 @@
         "component": {
             "toolchain": "toolchain-build-js-cache",
             "files": [
+                "package.json",
                 "package-lock.json"
             ],
             "targets": [
