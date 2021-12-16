@@ -2,12 +2,7 @@
     "id": "js_library",
     "component": {
         "toolchain": "toolchain-build-js",
-        "files": [
-            "*.js",
-            "package-lock.json",
-            "package.json",
-            ".npmignore"
-        ],
+        "files_profile": "js",
         "targets": [
             ".build/js_library-0.0.0.tgz"
         ]

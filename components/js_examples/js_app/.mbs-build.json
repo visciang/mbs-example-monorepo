@@ -3,10 +3,7 @@
         "id": "js_app-cache",
         "component": {
             "toolchain": "toolchain-build-js-cache",
-            "files": [
-                "package.json",
-                "package-lock.json"
-            ],
+            "files_profile": "js-cache",
             "targets": [
                 ".cache/cache.tgz"
             ]
@@ -16,12 +13,7 @@
         "id": "js_app",
         "component": {
             "toolchain": "toolchain-build-js",
-            "files": [
-                "*.js",
-                "package-lock.json",
-                "package.json",
-                ".npmignore"
-            ],
+            "files_profile": "js",
             "targets": [
                 ".build/js_app-0.0.0.tgz"
             ],
