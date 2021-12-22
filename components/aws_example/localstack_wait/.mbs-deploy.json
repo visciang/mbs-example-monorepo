@@ -12,8 +12,7 @@
             "localstack"
         ]
     },
-    "docker_opts": [
-        "--net",
-        "host"
-    ]
+    "docker_opts": {
+        "run": ["--net", "host"]
+    }
 }

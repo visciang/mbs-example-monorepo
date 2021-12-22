@@ -9,9 +9,11 @@
             "infrastructure_terraform_state"
         ]
     },
-    "docker_opts": [
-        "--net", "host",
-        "-e", "AWS_ACCESS_KEY_ID=test",
-        "-e", "AWS_SECRET_ACCESS_KEY=test"
-    ]
+    "docker_opts": {
+        "run": [
+            "--net", "host",
+            "-e", "AWS_ACCESS_KEY_ID=test",
+            "-e", "AWS_SECRET_ACCESS_KEY=test"
+        ]
+    }
 }
