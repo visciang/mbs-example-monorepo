@@ -1,0 +1,13 @@
+{
+    "id": "rust_lib",
+    "component": {
+        "toolchain": "toolchain-build-rust",
+        "files_profile": "rs",
+        "targets": [
+            "target/release/librust_lib.rlib"
+        ],
+        "dependencies": [
+            "rust_sublib"
+        ]
+    }
+}

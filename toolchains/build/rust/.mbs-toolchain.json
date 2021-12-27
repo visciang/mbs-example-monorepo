@@ -1,0 +1,14 @@
+{
+    "id": "toolchain-build-rust",
+    "toolchain": {
+        "dockerfile": "Dockerfile",
+        "files": [
+            "toolchain.sh"
+        ],
+        "steps": [
+            "lint",
+            "build",
+            "test"
+        ]
+    }
+}
