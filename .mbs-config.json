@@ -11,11 +11,15 @@
     },
     "timeout": 600,
     "files_profile": {
-        "elixir": [
+        "ex": [
             ".formatter.exs",
             "mix.{exs,lock}",
             "config/*.exs",
             "{apps,lib,test}/**/*.{ex,exs}"
+        ],
+        "rs": [
+            "Cargo.{toml,lock}",
+            "{src,tests}/**/*.rs"
         ],
         "ts": [
             "!node_modules/**/*",

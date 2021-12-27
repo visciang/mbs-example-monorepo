@@ -5,12 +5,7 @@
         "toolchain_opts": [
             "--type", "lib"
         ],
-        "files": [
-            ".formatter.exs",
-            "lib/**/*.ex",
-            "mix.exs",
-            "mix.lock"
-        ],
+        "files_profile": "ex",
         "targets": [
             "_build/ex_sublib"
         ]
