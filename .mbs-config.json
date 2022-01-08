@@ -12,17 +12,19 @@
     "timeout": 600,
     "files_profile": {
         "ex": [
+            "!{deps,_build,.elixir_ls}",
             ".formatter.exs",
             "mix.{exs,lock}",
             "config/*.exs",
             "{apps,lib,test}/**/*.{ex,exs}"
         ],
         "rs": [
+            "!target",
             "Cargo.{toml,lock}",
             "{src,tests}/**/*.rs"
         ],
         "ts": [
-            "!node_modules/**/*",
+            "!node_modules",
             "**/*.ts",
             "package-lock.json",
             "package.json",
@@ -30,13 +32,14 @@
             ".npmignore"
         ],
         "js": [
-            "!node_modules/**/*",
+            "!node_modules",
             "**/*.js",
             "package-lock.json",
             "package.json",
             ".npmignore"
         ],
         "js-cache": [
+            "!node_modules",
             "package-lock.json",
             "package.json"
         ]

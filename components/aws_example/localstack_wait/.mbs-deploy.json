@@ -5,7 +5,7 @@
         "toolchain_opts": [
             "./wait_localstack.sh"
         ],
-        "files": [
+        "build_target_dependencies": [
             ".build/wait_localstack.sh"
         ],
         "dependencies": [

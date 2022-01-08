@@ -14,10 +14,10 @@ case $1 in
         mv cache.tgz .cache
         ;;
     lint)
-        prettier --check . "!.{build,deps}/**/*" "!.mbs-*.json"
+        prettier --check . "!.{build,mbs-deps}/**/*" "!.mbs-*.json"
         ;;
     build)
-        CACHE_FROM=.deps/$MBS_ID-cache/cache.tgz
+        CACHE_FROM=.mbs-deps/$MBS_ID-cache/cache.tgz
         if [ -f $CACHE_FROM ]; then
             echo "Using cached deps"
             tar xzf $CACHE_FROM

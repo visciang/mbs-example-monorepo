@@ -3,7 +3,7 @@
     "component": {
         "toolchain": "toolchain-deploy-docker_compose",
         "toolchain_opts": ["--load-only"],
-        "files": [
+        "build_target_dependencies": [
             "docker://python_native_app_dockerized"
         ]
     }

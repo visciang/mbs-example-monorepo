@@ -2,7 +2,7 @@
 
 set -e
 
-MBS_VERSION=0.4.1
+MBS_VERSION=0.5.0
 BASEDIR=$(dirname "$0")
 BASEDIR=$(readlink -f -- "$BASEDIR")
 

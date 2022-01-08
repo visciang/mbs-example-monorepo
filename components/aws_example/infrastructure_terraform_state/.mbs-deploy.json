@@ -5,7 +5,7 @@
         "toolchain_opts": [
             "./run.sh"
         ],
-        "files": [
+        "build_target_dependencies": [
             ".build/run.sh"
         ],
         "dependencies": [

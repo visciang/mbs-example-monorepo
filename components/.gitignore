@@ -1,5 +1,5 @@
 .build/
-.deps/
+.mbs-deps/
 
 elixir_examples/**/_build/
 elixir_examples/**/deps/

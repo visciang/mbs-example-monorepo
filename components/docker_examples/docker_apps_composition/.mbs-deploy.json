@@ -2,7 +2,7 @@
     "id": "docker_apps_composition",
     "component": {
         "toolchain": "toolchain-deploy-docker_compose",
-        "files": [
+        "build_target_dependencies": [
             ".build/docker-compose.yml"
         ],
         "dependencies": [
