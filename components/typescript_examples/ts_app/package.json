@@ -2,11 +2,11 @@
   "name": "ts_app",
   "version": "0.0.0",
   "dependencies": {
-    "typescript": "^4.5.3",
-    "ts_library": "file:../ts_library"
+    "ts_library": "link:../ts_library",
+    "typescript": "^4.5.5"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "cd ../ts_library && pnpm install --frozen-lockfile && cd - && tsc"
   },
   "bundledDependencies": [
     "ts_library"

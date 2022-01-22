@@ -5,8 +5,11 @@
   "bin": {
     "js_app": "index.js"
   },
+  "scripts": {
+    "build": "echo build"
+  },
   "dependencies": {
-    "js_library": "file:../js_library",
+    "js_library": "link:../js_library",
     "lodash": "^4.17.21"
   },
   "bundleDependencies": [

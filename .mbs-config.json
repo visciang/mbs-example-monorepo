@@ -25,22 +25,25 @@
         ],
         "ts": [
             "!node_modules",
+            "!.pnpm-store",
             "**/*.ts",
-            "package-lock.json",
+            "pnpm-lock.yaml",
             "package.json",
             "tsconfig.json",
             ".npmignore"
         ],
         "js": [
             "!node_modules",
+            "!.pnpm-store",
             "**/*.js",
-            "package-lock.json",
+            "pnpm-lock.yaml",
             "package.json",
             ".npmignore"
         ],
         "js-cache": [
             "!node_modules",
-            "package-lock.json",
+            "!.pnpm-store",
+            "pnpm-lock.yaml",
             "package.json"
         ]
     }
