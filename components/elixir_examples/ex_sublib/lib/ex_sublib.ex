@@ -1,5 +1,5 @@
 defmodule ExSubLib do
   def hello do
-    :hello_ex_sublib
+    Jason.encode!(%{hello: "ex_sublib"})
   end
 end
