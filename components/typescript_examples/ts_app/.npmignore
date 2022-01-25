@@ -1,2 +1,3 @@
 .mbs-*.json
 .build
+.mbs-deps

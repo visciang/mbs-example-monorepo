@@ -1,11 +1,11 @@
 {
-  "name": "ts_app",
+  "name": "ts_webapp",
   "version": "0.0.0",
   "dependencies": {
     "ts_library": "link:.mbs-deps/ts_library/package",
     "typescript": "^4.5.5"
   },
   "scripts": {
-    "build": "pnpm install --frozen-lockfile && tsc"
+    "build": "tsc --noEmit && esbuild src/index.ts --bundle --outfile=dist/index.js"
   }
 }

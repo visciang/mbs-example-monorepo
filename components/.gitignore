@@ -1,5 +1,6 @@
 .build/
 .mbs-deps/
+.cache
 
 elixir_examples/**/_build/
 elixir_examples/**/deps/
@@ -7,8 +8,9 @@ elixir_examples/**/deps/
 go_examples/bin
 go_examples/pkg
 
-node_modules/
-.cache
+typescript_examples/*/dist
+typescript_examples/*/node_modules/
+typescript_examples/*/.pnpm-store/
 
 python*/**/*.egg-info/
 python*/**/build/

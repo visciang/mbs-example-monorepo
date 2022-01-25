@@ -1,10 +1,25 @@
-{
+[
+    {
+        "id": "ts_library-cache",
+        "component": {
+            "toolchain": "toolchain-build-js-cache",
+            "files_profile": "ts-cache",
+            "targets": [
+                ".cache/cache.tgz"
+            ]
+        }
+    },
+    {
     "id": "ts_library",
     "component": {
         "toolchain": "toolchain-build-js",
         "files_profile": "ts",
         "targets": [
             ".build/ts_library-0.0.0.tgz"
+        ],
+        "dependencies": [
+            "ts_library-cache"
         ]
     }
 }
+]

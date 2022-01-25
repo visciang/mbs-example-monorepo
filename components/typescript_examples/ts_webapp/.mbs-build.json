@@ -1,0 +1,16 @@
+{
+    "id": "ts_webapp",
+    "component": {
+        "toolchain": "toolchain-build-js",
+        "files_profile": "ts",
+        "files": [
+            "index.html"
+        ],
+        "targets": [
+            ".build/ts_webapp-0.0.0.tgz"
+        ],
+        "dependencies": [
+            "ts_library"
+        ]
+    }
+}
