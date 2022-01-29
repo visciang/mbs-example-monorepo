@@ -4,6 +4,9 @@
 elixir_examples/**/_build/
 elixir_examples/**/deps/
 
+dotnet_examples/*/bin
+dotnet_examples/*/obj
+
 go_examples/bin
 go_examples/pkg
 
