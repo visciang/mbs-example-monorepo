@@ -1,0 +1,14 @@
+{
+    "id": "toolchain-build-dotnet",
+    "toolchain": {
+        "dockerfile": "Dockerfile",
+        "files": [
+            "toolchain.sh"
+        ],
+        "steps": [
+            "lint",
+            "build",
+            "pack"
+        ]
+    }
+}

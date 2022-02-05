@@ -1,0 +1,10 @@
+{
+    "id": "fsharp_lib",
+    "component": {
+        "toolchain": "toolchain-build-dotnet",
+        "files_profile": "F#",
+        "targets": [
+            "bin/mbs/fsharp_lib.1.0.0.nupkg"
+        ]
+    }
+}

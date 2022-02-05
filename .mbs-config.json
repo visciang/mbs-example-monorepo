@@ -18,6 +18,11 @@
             "config/*.exs",
             "{apps,lib,test}/**/*.{ex,exs}"
         ],
+        "F#": [
+            "!{bin,objs}",
+            "*.fsproj",
+            "src/**/*.fs"
+        ],
         "rs": [
             "!target",
             "Cargo.{toml,lock}",
